@@ -56,10 +56,6 @@ class Tracker extends CollectorAbstract implements Bootable {
      * @param int    $threshold The limit for the option.
      */
     public function __construct( $endpoint, $threshold ) {
-        if ( ! $this->tracking_enabled() ) {
-            return;
-        }
-
         $this->endpoint     = $endpoint;
         $this->threshold    = $threshold;
         $this->current_time = time();
